@@ -9,10 +9,10 @@ An interactive Power BI report exploring 1,000 fast-food sales transactions from
 5. How does revenue compare between calendar years 2022 and 2023 within the dataset period?
 
 ## Tools
-- Microsoft Power BI (`LUP2.pbix`)
+- Microsoft Power BI (Sales_Performance_Dashboard_II.pbix)
 - Power Query
 - DAX
-- CSV data source
+- CSV data source (Balaji Fast Food Sales.csv)
 
 ## Dataset
 - **Name:** Balaji Fast Food Sales
@@ -22,12 +22,12 @@ An interactive Power BI report exploring 1,000 fast-food sales transactions from
 - **Period after parsing:** April 1, 2022 – March 30, 2023
 
 ## Files
-- `LUP2.pbix` — Power BI report.
+- `Sales_Performance_Dashboard_II.pbix` — Power BI report.
 - `Balaji Fast Food Sales.csv` — source dataset used in the report.
 - `assets/sales-performance-dashboard.png` — dashboard preview.
 
 ## Dashboard preview
-![Sales Performance Dashboard](assets/sales-performance-dashboard.png)
+![data-analysis-portfolio]Sales_Performance_Dashboard_II.png
 
 ## Key performance indicators
 | KPI | Value |
@@ -59,7 +59,7 @@ An interactive Power BI report exploring 1,000 fast-food sales transactions from
 
 ## Measures
 DAX definitions for each calculation done in PowerBI:
-- Total Revenue:
+- Total Revenue: 
 - Units Sold:
 - Total Orders:
 - Average Order Value:
