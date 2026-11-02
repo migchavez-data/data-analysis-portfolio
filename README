@@ -1,0 +1,71 @@
+## Project overview
+An interactive Power BI report exploring 1,000 fast-food sales transactions from April 1, 2022 to March 30, 2023. The dashboard examines revenue, order volume, units sold, product performance, payment methods and demand by day and time of sale.
+
+## Business questions
+1. How much revenue was generated and how many orders and units were recorded?
+2. Which products contribute most to revenue, and which sell the most units?
+3. Which days and time periods show the strongest sales activity?
+4. How are recorded payments distributed across payment methods?
+5. How does revenue compare between calendar years 2022 and 2023 within the dataset period?
+
+## Tools
+- Microsoft Power BI (`LUP2.pbix`)
+- Power Query
+- DAX
+- CSV data source
+
+## Dataset
+- **Name:** Balaji Fast Food Sales
+- **Source:** [Kaggle – Balaji Fast Food Sales](https://www.kaggle.com/datasets/ahmedhalimo/balaji-fast-food-sales)
+- **File:** `Balaji Fast Food Sales.csv`
+- **Size:** 1,000 rows × 10 columns
+- **Period after parsing:** April 1, 2022 – March 30, 2023
+
+## Files
+- `LUP2.pbix` — Power BI report.
+- `Balaji Fast Food Sales.csv` — source dataset used in the report.
+- `assets/sales-performance-dashboard.png` — dashboard preview.
+
+## Dashboard preview
+![Sales Performance Dashboard](assets/sales-performance-dashboard.png)
+
+## Key performance indicators
+| KPI | Value |
+|---|---:|
+| Revenue | $275,230 |
+| Units sold | 8,162 |
+| Orders | 1,000 |
+| Average order value | $275.23 |
+| Revenue 2022 | $195,575 |
+| Revenue 2023 | $79,655 |
+| Year-on-year change displayed | -59.27% |
+
+**Interpretation note:** 2022 and 2023 are partial calendar years in this dataset. The -59.27% calculation compares the revenue recorded in 2023 (January–March) with the revenue recorded in 2022 (April–December), so it should not be presented as a like-for-like annual performance decline. A fairer comparison would compare January–March 2023 with January–March 2022, if the latter period exists in the data; it does not in this dataset. Present the figure as a difference between the two calendar-year portions represented, not as a full-year YoY growth rate.
+
+## Data quality
+- `transaction_type` contains 107 missing values (10.7% of rows). These were change to "not specified" while these unknown values were not possible to fill
+- Dates are represented with mixed separators (`-` and `/`). They parse consistently as month-first dates (`MM-DD-YYYY` or `MM/DD/YYYY`) to produce the dataset period April 2022–March 2023.
+- `transaction_amount` equals `item_price × quantity` for all 1000 rows.
+- No exact duplicate rows were found.
+- `order_id` has 1000 distinct values.
+
+## Findings from the source data
+- **Top revenue product:** {products.index[0]} (${products.iloc[0]['revenue']:,.0f}).
+- **Top unit-volume product:** {products['units'].idxmax()} ({products['units'].max():,} units).
+- **Highest-revenue month:** {monthly.idxmax()} (${monthly.max():,.0f}).
+- **Highest-revenue time period:** {times.index[0]} (${times.iloc[0]['revenue']:,.0f}; {times.iloc[0]['units']:,} units).
+- **Revenue by item type:** Fastfood ${df.loc[df.item_type == 'Fastfood','transaction_amount'].sum():,.0f}; Beverages ${df.loc[df.item_type == 'Beverages','transaction_amount'].sum():,.0f}.
+
+
+## Measures
+DAX definitions for each calculation done in PowerBI:
+- Total Revenue:
+- Units Sold:
+- Total Orders:
+- Average Order Value:
+- Revenue by Previous Comparable Period:
+- Revenue Variance %:
+
+## Interactive report
+Published through Power BI Service
+URL: 
