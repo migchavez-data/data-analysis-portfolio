@@ -45,7 +45,7 @@ URL:
 ![data-analysis-portfolio](https://github.com/migchavez-data/data-analysis-portfolio/blob/main/Sales_Performance_Dashboard_II.png)
 
 ## Data Model preview
-![data-analysis-portfolio]https://github.com/migchavez-data/data-analysis-portfolio/blob/main/Sales_Performance_DataModelling.png
+![data-analysis-portfolio](https://github.com/migchavez-data/data-analysis-portfolio/blob/main/Sales_Performance_DataModelling.png)
 
 ## Data Modelling
 After checking data distribution and variables a data star model was the way to work with
