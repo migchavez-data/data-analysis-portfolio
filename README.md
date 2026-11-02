@@ -4,10 +4,6 @@ Portfolio of Data Analytics, Business Intelligence and Data Visualization projec
 ## Project overview
 An interactive Power BI report exploring 1,000 fast-food sales transactions from April 1, 2022 to March 30, 2023. The dashboard examines revenue, order volume, units sold, product performance, payment methods and demand by day and time of sale.
 
-## Interactive report
-Published through Power BI Service
-URL: 
-
 ## Business questions
 1. How much revenue was generated and how many orders and units were recorded?
 2. Which products contribute most to revenue, and which sell the most units?
